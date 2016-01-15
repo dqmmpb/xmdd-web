@@ -1,0 +1,228 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+.car-list {
+  @include pxTorem(margin, 0);
+
+  .car {
+    @include pxTorem(margin, 0, 0, 0, 0);
+    background-color: $color-gray;
+
+    box-shadow: none;
+
+    .img {
+      @include pxTorem(width, 36px);
+    }
+
+
+    .car-info {
+      .item-media {
+        @include pxTorem(padding-top, 10px);
+        @include pxTorem(padding-bottom, 10px);
+      }
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: 0;
+      height: 0;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      @include pxTorem(height, 56px);
+      display: block;
+      position: relative;
+    }
+
+    .item-inner {
+
+      @include pxTorem(margin-left, 10px);
+      @include pxTorem(padding-right, 0);
+
+      background-image: none;
+
+      .item-title {
+        @include pxTorem(font-size, 13px);
+      }
+
+      &:after {
+        height: 0;
+      }
+
+    }
+
+
+    &:first-child:before {
+      height: 1px;
+    }
+
+    &:last-child {
+
+      & .wrapper:after {
+        height: 0;
+      }
+
+      &:after {
+        height: 1px;
+      }
+    }
+
+
+    .item-swipe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      background-color: $color-white;
+      z-index: 1;
+    }
+
+    .item-back {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .button-delete {
+        border: 0;
+        border-radius: 0;
+        @include pxTorem(height, 56px);
+        @include pxTorem(width, 54px);
+      }
+    }
+  }
+
+}
+
+
+html:not(.watch-active-state) .car-single .item-link:active, .car-single .item-link.active-state {
+  background-color: transparent;
+}
+
+html:not(.watch-active-state) .car-single .item-link:active .item-inner:after, .car-single .item-link.active-state .item-inner:after {
+  background-color: $color-gray-light;
+}
+
+.car-single {
+  @include pxTorem(margin, 0);
+
+
+
+  .car {
+
+    .item-link-no {
+      .item-inner {
+        background-image: none;
+      }
+    }
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+    }
+
+    .item-inner {
+
+      .item-title {
+        @include pxTorem(font-size, 14px);
+
+        &.label {
+          @include pxTorem(width, 60px);
+        }
+      }
+
+      .item-ipnut-select {
+        @include pxTorem(width, 60px);
+        @include pxTorem(margin, 0, 0, 0, 10px);
+
+        .select {
+          @include pxTorem(font-size, 14px);
+          @include pxTorem(height, 24px);
+          @include pxTorem(width, 40px);
+          @include pxTorem(padding, 0, 4px);
+          color: $color-green;
+          border: 1px solid $color-green;
+
+          @include pxTorem(border-radius, 2px);
+          position: relative;
+
+          option {
+            padding: 0;
+          }
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          @include pxTorem(top, 10px);
+          @include pxTorem(right, 4px);
+          width: 0px;
+          height: 0px;
+          border-top: 1px solid $color-green;
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+          border-botton: 1px solid transparent;
+          @include pxTorem(border-width, 4px);
+        }
+      }
+
+
+      input[type='date'] {
+        line-height: 2.15rem;
+      }
+
+      .text {
+        @include pxTorem(padding, 0, 10px);
+      }
+
+      .item-input {
+        input {
+          border: 0;
+        }
+      }
+
+
+    }
+
+  }
+
+}
+
+.brand-block {
+  margin: 0;
+}
+
+.series-block {
+  margin: 0;
+}

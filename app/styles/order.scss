@@ -1,0 +1,197 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+* {
+  font-family: 'Open Sans','Microsoft YaHei',sans-serif;
+}
+
+.order-list {
+
+  @include pxTorem(margin, 0);
+
+  .order {
+    @include pxTorem(margin, 5px, 0);
+
+    box-shadow: none;
+
+    .img {
+      @include pxTorem(width, 50px);
+      @include pxTorem(border-radius, 4px);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    .wrapper {
+      min-height: 2.2rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: auto;
+        top: auto;
+        height: 1px;
+        width: 100%;
+        background-color: #e7e7e7;
+        display: block;
+        z-index: 15;
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+      }
+    }
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      display: block;
+    }
+
+    .item-inner {
+
+      @include pxTorem(margin-left, 10px);
+      @include pxTorem(padding-right, 0);
+
+      background-image: none;
+
+      .shop-title {
+        @include pxTorem(font-size, 14px);
+        color: $default-font-color;
+      }
+
+      &:after {
+        height: 0;
+      }
+
+      .info {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 2px, 0);
+
+        color: $default-font-color-light;
+
+        .badge {
+          @include pxTorem(border-radius, 4px);
+          @include pxTorem(padding, 4px, 4px);
+          @include pxTorem(font-size, 10px);
+          color: $default-btn-active-color;
+        }
+
+        .badge-open {
+          background-color: $default-btn-active-bg-color;
+        }
+        .badge-no-comment {
+          background-color: $default-btn-bg-color;
+        }
+        .badge-close {
+          background-color: $color-red;
+        }
+      }
+    }
+
+    .wash {
+      .item-inner {
+        margin-left: 0;
+
+        .type {
+          @include pxTorem(font-size, 12px);
+          @include pxTorem(padding, 4px, 0, 0, 0);
+          color: $default-font-color;
+        }
+
+        .button-comment {
+          @include pxTorem(line-height, 25px);
+          @include pxTorem(height, 25px);
+          @include pxTorem(margin-left, 10px);
+          text-align: center;
+          background-color: $color-orange;
+          &.disabled {
+            background-color: $default-btn-bg-color;
+          }
+        }
+
+        .status {
+          @include pxTorem(font-size, 12px);
+          @include pxTorem(padding, 4px, 0, 0, 0);
+          color: $default-font-color;
+
+          &.success {
+            color: $default-success-color;
+          }
+
+          &.failed {
+            color: $default-failed-color;
+          }
+        }
+      }
+
+      &:after {
+        height: 0;
+      }
+    }
+
+
+    .order-info {
+
+      @include pxTorem(padding-top, 5px);
+      @include pxTorem(padding-bottom, 5px);
+
+      .item-inner {
+
+        @include pxTorem(padding-top, 13px);
+        @include pxTorem(padding-bottom, 12px);
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+

@@ -1,0 +1,160 @@
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.list-block {
+
+  .wrapper {
+    min-height: 2.2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: $color-gray-light;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+  }
+
+  .item-input {
+
+    position: relative;
+
+    input {
+      @include pxTorem(font-size, 14px);
+      @include pxTorem(padding, 0, 10px, 0, 10px);
+      border: 1px solid $default-border-color;
+      @include pxTorem(border-radius, 5px);
+      @include pxTorem(line-height, 18px);
+
+      & ~ .input-addon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        vertical-align: middle;
+        @include pxTorem(line-height, 33px);
+        @include pxTorem(font-size, 14px);
+        @include pxTorem(padding, 5px, 15px);
+
+      }
+    }
+
+  }
+
+  .input-group {
+    display: table;
+
+    input {
+      display: table-cell;
+    }
+
+    .input-group-addon {
+      display: table-cell;
+      width: 1%;
+      white-space: nowrap;
+      vertical-align: middle;
+
+      & button {
+        @include pxTorem(height, 43px);
+        width: 100%;
+      }
+
+      & button.button-code {
+        @include pxTorem(width, 110px);
+      }
+      & button.button-close {
+        @include pxTorem(width, 36px);
+      }
+
+    }
+
+    & > *, & > .input, & > .input-group-addon button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-left-width: 0;
+      &:empty {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-left-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+      }
+    }
+
+    & > :first-child {
+      &:empty {
+        @include pxTorem(border-top-left-radius, 5px);
+        @include pxTorem(border-bottom-left-radius, 5px);
+        border-left-width: 1px;
+      }
+      & > button {
+        @include pxTorem(border-top-left-radius, 5px);
+        @include pxTorem(border-bottom-left-radius, 5px);
+        border-left-width: 1px;
+        border-right-width: 1px;
+      }
+
+    }
+
+    & > :last-child {
+      &:empty {
+        @include pxTorem(border-top-right-radius, 5px);
+        @include pxTorem(border-bottom-right-radius, 5px);
+        border-right-width: 1px;
+      }
+      & > button {
+        @include pxTorem(border-top-right-radius, 5px);
+        @include pxTorem(border-bottom-right-radius, 5px);
+        border-left-width: 1px;
+        border-right-width: 1px;
+      }
+    }
+
+    & > .input-group-addon + .input-group-addon {
+      & button {
+        border-left-width: 0;
+      }
+    }
+  }
+
+  .form-input {
+    &:after {
+      height: 0;
+    }
+  }
+
+}
+
+.padding-top-15 {
+  @include pxTorem(padding-top, 15px);
+}
+
+.padding-bottom-15 {
+  @include pxTorem(padding-bottom, 15px);
+}

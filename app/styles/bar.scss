@@ -1,0 +1,28 @@
+
+.bar {
+  .icon {
+    color: $default-icon-color;
+
+    &.active {
+      color: $default-icon-active-color;
+    }
+  }
+}
+
+.bar-transparent {
+  background-color: transparent;
+  & ~ .content {
+    top: 0;
+  }
+  &:after {
+    height: 0;
+  }
+}
+
+.bar-footer {
+
+  .button {
+    @include pxTorem(height, 32px);
+    @include pxTorem(line-height, 32px);
+  }
+}

@@ -1,0 +1,35 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+@import 'icon.scss';
+
+.pull-to-refresh-layer {
+
+  .pull-to-refresh-arrow {
+    margin-left: -0.325rem;
+  }
+}
+
+.infinite-scroll-preloader {
+  margin: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.2rem;
+  display: none;
+
+  .preloader {
+    width: 1rem;
+    height: 1rem;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+  }
+
+}
+
+

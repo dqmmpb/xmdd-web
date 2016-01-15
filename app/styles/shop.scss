@@ -1,0 +1,648 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+.shop-list {
+
+  @include pxTorem(margin, 0);
+
+  .shop {
+    @include pxTorem(margin, 5px, 0);
+
+    box-shadow: none;
+
+    .img {
+      @include pxTorem(width, 60px);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      display: block;
+    }
+
+    .item-inner {
+
+      @include pxTorem(margin-left, 10px);
+      @include pxTorem(padding-right, 0);
+
+      background-image: none;
+
+      .shop-title {
+        @include pxTorem(font-size, 14px);
+        color: $default-font-color;
+      }
+
+      &:after {
+        height: 0;
+      }
+
+      .comments {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0);
+
+        .rank-stars {
+          color: $color-orange;
+          .icon {
+            width: 0.7rem;
+            height: 0.7rem;
+            text-align: center;
+            &.active {
+              color: $color-orange;
+            }
+          }
+        }
+
+        .rank-points {
+          color: $color-orange;
+        }
+
+        .badge {
+          @include pxTorem(border-radius, 4px);
+          @include pxTorem(padding, 4px, 4px);
+          @include pxTorem(font-size, 10px);
+          color: $default-btn-active-color;
+        }
+
+        .badge-open {
+          background-color: $default-btn-active-bg-color;
+        }
+        .badge-close {
+          background-color: $default-btn-bg-color;
+        }
+      }
+      .location {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0, 0, 0);
+
+        color: $default-font-color-light;
+
+        .address {
+          color: $default-font-color-light;
+        }
+
+        .distance {
+          color: $default-font-color-light;
+        }
+      }
+    }
+
+    .wash {
+      .item-inner {
+        margin-left: 0;
+
+        .type {
+          @include pxTorem(padding, 2px, 0);
+          color: $default-font-color;
+        }
+        .button-pay {
+          @include pxTorem(line-height, 25px);
+          @include pxTorem(height, 25px);
+          background-color: $color-orange-dark;
+          &.disabled {
+            background-color: $default-btn-bg-color;
+          }
+        }
+      }
+
+      &:after {
+        height: 0;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+}
+
+.shop-single-swiper-container {
+  padding-bottom: 0;
+
+  & > .swiper-pagination {
+    @include pxTorem(bottom, 0);
+    -webkit-transition: 0ms;
+    transition: 0ms;
+
+    & .swiper-pagination-bullet {
+      @include pxTorem(margin, 0, 3px);
+      &.swiper-pagination-bullet-active {
+        background-color: $color-orange;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.shop-single {
+
+  @include pxTorem(margin, 0);
+
+  .shop {
+    @include pxTorem(margin, 5px, 0);
+
+    box-shadow: none;
+
+    .img {
+      @include pxTorem(width, 60px);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      display: block;
+    }
+
+    .item-inner {
+
+      @include pxTorem(margin-left, 0);
+      @include pxTorem(padding-right, 0);
+      @include pxTorem(padding-top, 12px);
+      @include pxTorem(padding-bottom, 11px);
+
+      background-image: none;
+
+      .item-title {
+        @include pxTorem(font-size, 13px);
+      }
+      .item-after {
+        @include pxTorem(font-size, 12px);
+      }
+
+
+      .shop-title {
+        @include pxTorem(font-size, 14px);
+        color: $default-font-color;
+      }
+
+      &:after {
+        height: 0;
+      }
+
+      .comments {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0);
+
+        .rank-stars {
+          color: $color-orange;
+          .icon {
+            width: 0.7rem;
+            height: 0.7rem;
+            text-align: center;
+            &.active {
+              color: $color-orange;
+            }
+          }
+        }
+
+        .rank-points {
+          color: $color-orange;
+        }
+
+        .badge {
+          @include pxTorem(border-radius, 4px);
+          @include pxTorem(padding, 4px, 4px);
+          @include pxTorem(font-size, 10px);
+          color: $default-btn-active-color;
+        }
+
+        .badge-open {
+          background-color: $default-btn-active-bg-color;
+        }
+        .badge-close {
+          background-color: $default-btn-bg-color;
+        }
+      }
+      .location {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0, 0, 0);
+
+        color: $default-font-color-light;
+
+        .address {
+          color: $default-font-color-light;
+        }
+
+        .distance {
+          color: $default-font-color-light;
+        }
+
+        .open-time {
+          @include pxTorem(font-size, 10px);
+
+          .badge {
+            @include pxTorem(border-radius, 4px);
+            @include pxTorem(padding, 4px, 4px);
+            @include pxTorem(font-size, 10px);
+            color: $default-btn-active-color;
+          }
+
+          .badge-open {
+            background-color: $default-btn-active-bg-color;
+          }
+          .badge-close {
+            background-color: $default-btn-bg-color;
+          }
+
+          .time {
+            margin-left: 0.25rem;
+          }
+        }
+      }
+
+      .comment-title {
+        text-align: center;
+        width: 100%;
+        color: $color-gray;
+        @include pxTorem(margin-bottom, 10px);
+
+      }
+      .comment-textarea-input {
+        @include pxTorem(margin-top, 0);
+        @include pxTorem(margin-bottom, 0);
+        .comment-textarea {
+          @include pxTorem(font-size, 12px);
+          @include pxTorem(border-radius, 4px);
+          border: 1px solid $default-border-color;
+          text-align: justify;
+        }
+      }
+
+    }
+
+    .contact {
+      .item-inner {
+        margin-left: 0;
+
+        .button-phone {
+          @include pxTorem(width, 48px);
+          @include pxTorem(line-height, 19px);
+          @include pxTorem(height, 19px);
+          border-width: 0;
+        }
+      }
+    }
+
+    .wash {
+      .item-inner {
+        margin-left: 0;
+
+        .type {
+          @include pxTorem(padding, 2px, 0);
+          color: $default-font-color;
+        }
+        .button-pay {
+          @include pxTorem(line-height, 25px);
+          @include pxTorem(height, 25px);
+          background-color: $color-orange-dark;
+
+          &.disabled {
+            background-color: $default-btn-bg-color;
+          }
+        }
+      }
+
+      &:after {
+        height: 0;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include pxTorem(margin-bottom, 5px);
+}
+
+.shop-single-comment-list {
+  @include pxTorem(margin, 0);
+
+  .comment {
+    @include pxTorem(margin, 0);
+
+    box-shadow: none;
+
+    .img {
+      @include pxTorem(width, 30px);
+    }
+
+
+    .comment-info {
+      align-items: baseline;
+      .item-media {
+        @include pxTorem(padding-top, 10px);
+        @include pxTorem(padding-bottom, 9px);
+      }
+    }
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: 0;
+      height: 0;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      top: auto;
+      height: 0;
+      width: 100%;
+      background-color: #e7e7e7;
+      display: block;
+      z-index: 15;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    }
+
+    .item-content {
+      @include pxTorem(padding-left, 10px);
+      @include pxTorem(padding-right, 10px);
+      display: block;
+    }
+
+    .item-inner {
+
+      @include pxTorem(margin-left, 10px);
+      @include pxTorem(padding-right, 0);
+
+      background-image: none;
+
+      .item-title {
+        @include pxTorem(font-size, 13px);
+      }
+
+      &:after {
+        height: 0;
+      }
+
+      .location {
+
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0, 0, 0);
+
+        color: $default-font-color-light;
+
+        .address {
+          color: $default-font-color-light;
+        }
+
+        .distance {
+          color: $default-font-color-light;
+        }
+      }
+
+      .wash {
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(padding, 1px, 0, 0, 0);
+
+        .item-title {
+          font-size: inherit;
+        }
+
+        color: $default-font-color-light;
+
+        .type {
+          color: $default-font-color-light;
+        }
+
+        .date {
+          color: $default-font-color-light;
+        }
+      }
+
+      .comment-text {
+        @include pxTorem(margin-top, 2px);
+        @include pxTorem(font-size, 12px);
+        @include pxTorem(line-height, 14px);
+        height: auto;
+        display: block;
+        text-align: justify;
+      }
+    }
+
+    &:first-child:before {
+      height: 1px;
+    }
+
+    &:last-child {
+
+      & .wrapper:after {
+        height: 0;
+      }
+
+      &:after {
+        height: 1px;
+      }
+    }
+  }
+
+  .comment-header {
+
+    .item-content {
+      @include pxTorem(min-height, 40px);
+
+      .wrapper {
+        @include pxTorem(min-height, 40px);
+
+        .item-inner {
+          margin-left: 0;
+          @include pxTorem(padding-top, 11px);
+          @include pxTorem(padding-bottom, 10px);
+
+          @include pxTorem(min-height, 40px);
+
+          .item-title {
+            @include pxTorem(font-size, 12px);
+          }
+
+          .all {
+            @include pxTorem(font-size, 12px);
+            color: $default-color;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+
+.comment-single {
+
+  .shop {
+
+    .shop-info {
+      .item-inner {
+
+        .item-title {
+          @include pxTorem(width, 56px);
+          text-align: justify;
+          -ms-text-align-last: justify;
+          text-align-last: justify;
+          -webkit-text-align-last:justify;
+          -webkit-box-pack: justify;
+        }
+
+        .item-after {
+          @include pxTorem(max-width, 220px);
+          white-space: nowrap;
+          position: relative;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.pay-single {
+
+  .shop {
+
+    .shop-info {
+      .item-inner {
+
+        .item-title {
+          @include pxTorem(width, 56px);
+          text-align: justify;
+          -ms-text-align-last: justify;
+          text-align-last: justify;
+          -webkit-text-align-last:justify;
+          -webkit-box-pack: justify;
+        }
+
+        .item-after {
+          @include pxTorem(max-width, 220px);
+          white-space: nowrap;
+          position: relative;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+        }
+      }
+    }
+
+    .xmdd-icon-close {
+      color: $color-gray;
+    }
+
+    &:after {
+      height: 0;
+    }
+  }
+
+}
+
+.login-single {
+
+  .shop {
+
+
+    .xmdd-icon-close {
+      color: $color-gray;
+    }
+
+    &:after {
+      height: 0;
+    }
+  }
+
+
+}

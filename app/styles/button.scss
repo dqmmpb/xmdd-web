@@ -1,0 +1,45 @@
+.button-warning {
+  background-color: transparent;
+  color: $color-orange-dark;
+  border-color: $color-orange-dark;
+  &:disabled {
+    color: $default-btn-color;
+    border-color: $default-btn-bg-color;
+    background-color: $default-btn-bg-color;
+  }
+}
+
+.button-success {
+  background-color: $color-white;
+  color: $color-green;
+  border-color: $color-green;
+  &:disabled {
+    color: $default-btn-color;
+    border-color: $default-btn-bg-color;
+    background-color: $default-btn-bg-color;
+  }
+}
+
+.button-fill {
+  &.button-warning {
+    background-color: $color-orange-dark;
+    color: $color-white;
+    border-color: $color-orange-dark;
+    &:disabled {
+      color: $default-btn-color;
+      border-color: $default-btn-bg-color;
+      background-color: $default-btn-bg-color;
+    }
+  }
+  &.button-success {
+    background-color: $color-green;
+    color: $color-white;
+    border-color: $color-green;
+    &:disabled {
+      color: $default-btn-color;
+      border-color: $default-btn-bg-color;
+      background-color: $default-btn-bg-color;
+    }
+  }
+}
+

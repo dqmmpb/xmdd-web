@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'xmdd';
+  src:    url('../fonts/xmdd.eot?2ac73k');
+  src:    url('../fonts/xmdd.eot?2ac73k#iefix') format('embedded-opentype'),
+  url('../fonts/xmdd.ttf?2ac73k') format('truetype'),
+  url('../fonts/xmdd.woff?2ac73k') format('woff'),
+  url('../fonts/xmdd.svg?2ac73k#xmdd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="xmdd-icon-"], [class*=" xmdd-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'xmdd' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xmdd-icon-check:before {
+  content: "\e90b";
+}
+.xmdd-icon-check-o:before {
+  content: "\e90c";
+}
+.xmdd-icon-close:before {
+  content: "\e90d";
+}
+.xmdd-icon-logo:before {
+  content: "\e90a";
+}
+.xmdd-icon-phone:before {
+  content: "\e909";
+}
+.xmdd-icon-star-o:before {
+  content: "\e906";
+}
+.xmdd-icon-star:before {
+  content: "\e907";
+}
+.xmdd-icon-star-half-o:before {
+  content: "\e908";
+}
+.xmdd-icon-user:before {
+  content: "\e900";
+}
+.xmdd-icon-back:before {
+  content: "\e901";
+}
+.xmdd-icon-car:before {
+  content: "\e902";
+}
+.xmdd-icon-map-marker:before {
+  content: "\e903";
+}
+.xmdd-icon-home:before {
+  content: "\e904";
+}
+.xmdd-icon-order:before {
+  content: "\e905";
+}

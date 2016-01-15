@@ -1,0 +1,37 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+// Variables
+@import "variables.scss";
+
+// Mixins
+@import "mixins.scss";
+@import 'button.scss';
+@import 'icon.scss';
+@import 'bar.scss';
+@import 'form.scss';
+@import 'list.scss';
+@import 'panel.scss';
+@import 'car.scss';
+@import 'shop.scss';
+@import 'order.scss';
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans','Microsoft YaHei',sans-serif;
+}
+
+.page-group {
+  overflow: hidden;
+}
+
+.content {
+  overflow-y: auto;
+  overflow-x: none;
+}
+
+.bg-white {
+  background: $color-white;
+}

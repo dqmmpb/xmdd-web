@@ -1,0 +1,44 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+$browser-default-font-size: 20px !default;
+
+
+// Color
+$color-white: #fff;
+$color-gray-light: #e7e7e7;
+$color-gray: #ddd;
+$color-gray-dark: #6d6d72;
+$color-green: #20ab2a;
+$color-red: #ff0000;
+$color-orange: #ffa800;
+$color-orange-dark: #ff5a00;
+$color-black: #000;
+
+// Font color
+$default-font-color: $color-black;
+$default-font-color-light: rgba($default-font-color, .5);
+
+$default-content-block-color: $color-gray-dark;
+$default-border-color: $color-gray-light;
+
+// Default Color
+$default-color: $color-green;
+$default-success-color: $color-green;
+$default-failed-color: $color-red;
+
+// Icon Color
+$default-icon-color: $color-gray-dark;
+$default-icon-active-color: $color-green;
+
+
+// Button Color
+$default-btn-color: $color-gray-dark;
+$default-btn-bg-color: $color-gray;
+
+$default-btn-active-color: $color-white;
+$default-btn-active-bg-color: $color-green;
+
+
