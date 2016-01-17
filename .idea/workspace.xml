@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ecfa2ad-7497-468d-bcea-b9f5a7384cb9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/car.html" afterPath="$PROJECT_DIR$/app/car.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cars.html" afterPath="$PROJECT_DIR$/app/cars.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/comment.html" afterPath="$PROJECT_DIR$/app/comment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/comments.html" afterPath="$PROJECT_DIR$/app/comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/location.html" afterPath="$PROJECT_DIR$/app/location.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.html" afterPath="$PROJECT_DIR$/app/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/orders.html" afterPath="$PROJECT_DIR$/app/orders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pay.html" afterPath="$PROJECT_DIR$/app/pay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/shop.html" afterPath="$PROJECT_DIR$/app/shop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.babel.js" afterPath="$PROJECT_DIR$/gulpfile.babel.js" />
     </list>
     <ignored path="xmdd-web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,16 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="car.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/car.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.958333">
-              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cars.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/cars.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,8 +66,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7083335">
-              <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="324" selection-end-column="21" />
+            <state vertical-scroll-proportion="-20.208334">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pay.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/pay.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5377358">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shop.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/shop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4056604">
-              <caret line="205" column="21" selection-start-line="205" selection-start-column="21" selection-end-line="205" selection-end-column="21" />
+            <state vertical-scroll-proportion="-5.2083335">
+              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -254,66 +243,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xmdd-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -402,10 +331,10 @@
     <frame x="1280" y="24" width="1280" height="1000" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34671125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34671125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18565737" sideWeight="0.4945227" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18565737" sideWeight="0.4945227" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960423" sideWeight="0.5054773" order="2" side_tool="true" content_ui="tabs" />
@@ -811,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7083335">
-          <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="324" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/location.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.958333">
@@ -853,8 +774,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/shop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4056604">
-          <caret line="205" column="21" selection-start-line="205" selection-start-column="21" selection-end-line="205" selection-end-column="21" />
+        <state vertical-scroll-proportion="-5.2083335">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.208334">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5377358">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
