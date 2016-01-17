@@ -52,3 +52,32 @@
     @include pxTorem(font-size, 24px);
   }
 }
+
+.ab-panel {
+  position: fixed;
+
+  @include pxTorem(right, 10px);
+  @include pxTorem(top, 50px);
+
+  ul.abs {
+    list-style: none;
+    @include pxTorem(font-size, 14px);
+
+    li {
+      @include pxTorem(margin-bottom, 5px);
+    }
+    .ab {
+      display: block;
+      @include pxTorem(height, 16px);
+      @include pxTorem(line-height, 16px);
+      @include pxTorem(width, 16px);
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .ab.active {
+      background-color: #1bb745;
+      color: #fff;
+    }
+  }
+}

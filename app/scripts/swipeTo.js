@@ -36,9 +36,9 @@ var animateTo = function(that, pos) {
   }
 };
 
-var addCssClass = function(className, rules) {
+/*var addCssClass = function(className, rules) {
   $('<style type="text/css">.' + className + '{' + rules + '}</style>').appendTo('head');
-};
+};*/
 
 var getPosition = function(touchHandler) {
   var touchMoveStatus;
@@ -71,7 +71,8 @@ $.fn.swipeTo = function(options) {
   var moving;
   var vertical;
   var verticalMov;
-  var direction;
+/*  var direction;*/
+  var blockRight;
   var res;
   var minSwipe = settings.minSwipe;
   var moveStatus;
@@ -83,7 +84,7 @@ $.fn.swipeTo = function(options) {
   var swipeMove = settings.swipeMove;
   var swipeEnd = settings.swipeEnd;
 
-  var onTouchStart = $(wrapScroll).on('touchstart', handler, function(ev) {
+  /*var onTouchStart = */$(wrapScroll).on('touchstart', handler, function(ev) {
     var that = $(this);
     var e = ev.originalEvent;
     start = e.touches[0].clientX;
@@ -95,7 +96,7 @@ $.fn.swipeTo = function(options) {
     }
   });
 
-  var onTouchMove = $(wrapScroll).on('touchmove', handler, function(ev) {
+  /*var onTouchMove = */$(wrapScroll).on('touchmove', handler, function(ev) {
 
     var that = $(this);
     that.removeClass('swiped');
@@ -107,13 +108,13 @@ $.fn.swipeTo = function(options) {
     var absRes = Math.abs(res);
     var absHorRes = Math.abs(horRes);
     if(res < 0) {
-      direction = 'left';
-      var blockLeft = true;
+/*      direction = 'left';*/
+      blockRight = false;
+    } else if(res > 0) {
+/*      direction = 'right';*/
+      blockRight = true;
     }
-    if(res > 0) {
-      direction = 'right';
-      var blockRight = true;
-    }
+
     var resPx = 0 - res;
     if(absRes >= (absHorRes * angle) && blockRight) {
       wrapScroll.addClass('overflow-hidden');
@@ -127,9 +128,10 @@ $.fn.swipeTo = function(options) {
     }
   });
 
-  var onTouchEnd = $('body').on('touchend', handler, function(ev) {
+  /*var onTouchEnd = */$('body').on('touchend', handler, function(ev) {
     var that = $(this);
     var e = ev.originalEvent;
+    e.preventDefault();
     wrapScroll.removeClass('overflow-hidden');
     that.removeClass('swiping');
     moveStatus = getPosition(that);
@@ -137,11 +139,11 @@ $.fn.swipeTo = function(options) {
     var absMoveStatus = Math.abs(moveStatus);
     that.addClass('swiped');
 
-    if(absMoveStatus < (typeof minSwipe == 'string' ? that.next(minSwipe).width() : minSwipe)) {
+    if(absMoveStatus < (typeof minSwipe === 'string' ? that.next(minSwipe).width() : minSwipe)) {
       animateTo(that, 0);
       that.removeClass('open');
     } else {
-      animateTo(that, 0 - (typeof minSwipe == 'string' ? that.next(minSwipe).width() : minSwipe));
+      animateTo(that, 0 - (typeof minSwipe === 'string' ? that.next(minSwipe).width() : minSwipe));
       that.addClass('open');
     }
     if(typeof swipeEnd === 'function') {
@@ -150,7 +152,7 @@ $.fn.swipeTo = function(options) {
   });
 
   if(binder) {
-    var onTap = $('body').on('click tap', handler, function(ev) {
+    /*var onTap =*/ $('body').on('click tap', handler, function(ev) {
       if(moveStatus !== 0) {
         var that = $(this);
         var e = ev.originalEvent;

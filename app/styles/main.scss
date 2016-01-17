@@ -29,9 +29,95 @@
 
 .content {
   overflow-y: auto;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 .bg-white {
   background: $color-white;
+}
+
+.brand-block {
+  margin: 0;
+}
+
+.series-block {
+  margin: 0;
+}
+
+.city-block {
+  margin: 0;
+}
+
+
+.geolocation-panel {
+
+  text-align: center;
+
+  .geo-status-panel {
+    margin: auto;
+    text-align: center;
+    @include pxTorem(padding, 20px, 0, 10px, 0);
+
+    .geo-status-img {
+      display: block;
+      width: 100%;
+      margin: auto;
+      @include pxTorem(width, 50px);
+      @include pxTorem(height, 50px);
+    }
+
+    .geo-status-loading {
+      @include pxTorem(width, 37px);
+    }
+
+    .geo-status-failed {
+      @include pxTorem(width, 50px);
+    }
+
+    .geo-location-loading {
+      -webkit-transform:rotate(0deg) translateZ(0);
+      -ms-transform:rotate(0deg) translateZ(0);
+      transform:rotate(0deg) translateZ(0);
+      -webkit-transition-duration:0ms;
+      -ms-transition-duration:0ms;
+      transition-duration:0ms;
+      -webkit-animation-name:geoLoading;
+      -ms-animation-name:geoLoading;
+      animation-name:geoLoading;
+      -webkit-animation-duration:1s;
+      -ms-animation-duration:1s;
+      animation-duration:1s;
+      -webkit-animation-iteration-count:infinite;
+      -ms-animation-iteration-count:infinite;
+      animation-iteration-count:infinite;
+      -webkit-animation-timing-function:linear;
+      -ms-animation-timing-function:linear;
+      animation-timing-function:linear;
+    }
+  }
+
+  .geo-status-info {
+    @include pxTorem(padding, 0, 0, 10px, 0);
+    @include pxTorem(font-size, 15px);
+    text-align: center;
+  }
+
+  .button-city-select {
+    @include pxTorem(width, 120px);
+    margin: 0 auto;
+  }
+}
+
+
+@-webkit-keyframes geoLoading {
+  from {-webkit-transform:rotate(0deg) translateZ(0)}
+  to {-webkit-transform:rotate(360deg) translateZ(0)}
+}
+@-ms-keyframes geoLoading {
+  from {-ms-transform:rotate(0deg) translateZ(0)}
+  to {-ms-transform:rotate(360deg) translateZ(0)}
+}
+@keyframes geoLoading {
+  from {transform:rotate(0deg) translateZ(0)}
+  to {transform:rotate(360deg) translateZ(0)}
 }

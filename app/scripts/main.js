@@ -676,25 +676,21 @@ $(document).on('pageInit', '#login-page', function(e, id, page) {
 // 登录页面
 $(document).on('pageInit', '#car-page', function(e, id, page) {
 
-  $(document).on('click','.popup-brand', function () {
-    var popupHTML = '<div class="popup">'+
-      '<div class="list-block brand-block">'+
-      '<div class="list-group">'+
+  $(page).on('click', '.popup-brand', function () {
+    var popupHTML = '<div class="popup">' +
+      '<div class ="list-block brand-block">' +
+      '<div class="list-group">' +
       '<ul>';
-      '</ul>'+
-      '</div>'+
-      '</div>'+
-      '</div>';
 
-    var letter = ['A', 'B','C','D'];
+    var letter = ['A', 'B', 'C', 'D'];
     for (var i = 0; i < letter.length; i++) {
       popupHTML += '<li class="list-group-title">' + letter[i] + '</li>';
-      var total =  1+Math.floor(Math.random()*10);
+      var total = 1 + Math.floor(Math.random() * 10);
       for(var j = 0; j < total; j++) {
-        popupHTML += '<li>'+
-        '<div class="item-content close-popup" data-label="' + letter[i] + j + '阿斯顿马丁">'+
-        '<div class="item-inner">'+
-        '<div class="item-title">' + j + '阿斯顿马丁</div>'+
+        popupHTML += '<li>' +
+        '<div class="item-content close-popup" data-label="' + letter[i] + j + '阿斯顿马丁">' +
+        '<div class="item-inner">' +
+        '<div class="item-title">' + j + '阿斯顿马丁</div>' +
         '</div>' +
         '</div>' +
         '</li>';
@@ -702,14 +698,27 @@ $(document).on('pageInit', '#car-page', function(e, id, page) {
 
     }
 
-    popupHTML += '</ul>'+
-      '</div>'+
-      '</div>'+
+    popupHTML += '</ul>' +
+      '</div>' +
+      '</div>' +/*
+      '<div class="ab-panel">'+
+      '<ul class="abs">'+
+      '<li><span class="ab" for="A">A</span></li>'+
+      '<li><span class="ab" for="B">B</span></li>'+
+      '<li><span class="ab" for="C">C</span></li>'+
+      '<li><span class="ab" for="D">D</span></li>'+
+      '<li><span class="ab" for="E">E</span></li>'+
+      '<li><span class="ab" for="F">F</span></li>'+
+      '<li><span class="ab" for="G">G</span></li>'+
+      '<li><span class="ab" for="H">H</span></li>'+
+      '<li><span class="ab" for="I">I</span></li>'+
+      '</ul>'+
+      '</div>'+*/
       '</div>';
 
     $.popup(popupHTML);
 
-    $(".brand-block .close-popup").on('click', function(event){
+    $('.brand-block .close-popup').on('click', function(){
       var newValue = $(this).data('label');
       var oldValue = $('input[name="brand"]').val();
 
@@ -721,27 +730,23 @@ $(document).on('pageInit', '#car-page', function(e, id, page) {
 
   });
 
-  $(document).on('click','.popup-series', function () {
+  $(page).on('click', '.popup-series', function () {
 
-    if($('#brand').text() != '') {
-      var popupHTML = '<div class="popup">'+
-        '<div class="list-block series-block">'+
-        '<div class="list-group">'+
+    if($('input[name="brand"]').val() !== '') {
+      var popupHTML = '<div class="popup">' +
+        '<div class="list-block series-block">' +
+        '<div class="list-group">' +
         '<ul>';
-      '</ul>'+
-      '</div>'+
-      '</div>'+
-      '</div>';
 
-      var letter = ['A', 'B','C','D'];
+      var letter = ['A', 'B', 'C', 'D'];
       for (var i = 0; i < letter.length; i++) {
         popupHTML += '<li class="list-group-title">' + letter[i] + '</li>';
-        var total =  1+Math.floor(Math.random()*10);
+        var total = 1 + Math.floor(Math.random() * 10);
         for(var j = 1; j < total; j++) {
-          popupHTML += '<li>'+
-            '<div class="item-content close-popup" data-label="' + letter[i] + j + 'Z4">'+
-            '<div class="item-inner">'+
-            '<div class="item-title">' + j + 'Z4</div>'+
+          popupHTML += '<li>' +
+            '<div class="item-content close-popup" data-label="' + letter[i] + j + 'Z4">' +
+            '<div class="item-inner">' +
+            '<div class="item-title">' + j + 'Z4</div>' +
             '</div>' +
             '</div>' +
             '</li>';
@@ -749,14 +754,14 @@ $(document).on('pageInit', '#car-page', function(e, id, page) {
 
       }
 
-      popupHTML += '</ul>'+
-        '</div>'+
-        '</div>'+
+      popupHTML += '</ul>' +
+        '</div>' +
+        '</div>' +
         '</div>';
 
       $.popup(popupHTML);
 
-      $(".series-block .close-popup").on('click', function(event){
+      $('.series-block .close-popup').on('click', function(){
   /*      $('#series').text($(this).data('label'));*/
         $('input[name="series"]').val($(this).data('label'));
       });
@@ -765,6 +770,65 @@ $(document).on('pageInit', '#car-page', function(e, id, page) {
 
 });
 
+
+
+// 登录页面
+$(document).on('pageInit', '#geo-page', function(e, id, page) {
+
+  $(page).on('click', '.popup-city', function () {
+    var popupHTML = '<div class="popup">' +
+      '<div class="list-block city-block">' +
+      '<div class="list-group">' +
+      '<ul>';
+
+    var letter = ['A', 'B', 'C', 'D'];
+    for (var i = 0; i < letter.length; i++) {
+      popupHTML += '<li class="list-group-title">' + letter[i] + '</li>';
+      var total = 1 + Math.floor(Math.random() * 10);
+      for (var j = 0; j < total; j++) {
+        popupHTML += '<li>' +
+          '<div class="item-content close-popup" data-label="' + letter[i] + j + '北京">' +
+          '<div class="item-inner">' +
+          '<div class="item-title">' + j + '北京</div>' +
+          '</div>' +
+          '</div>' +
+          '</li>';
+      }
+
+    }
+
+    popupHTML += '</ul>' +
+      '</div>' +
+      '</div>' + /*
+       '<div class="ab-panel">'+
+       '<ul class="abs">'+
+       '<li><span class="ab" for="A">A</span></li>'+
+       '<li><span class="ab" for="B">B</span></li>'+
+       '<li><span class="ab" for="C">C</span></li>'+
+       '<li><span class="ab" for="D">D</span></li>'+
+       '<li><span class="ab" for="E">E</span></li>'+
+       '<li><span class="ab" for="F">F</span></li>'+
+       '<li><span class="ab" for="G">G</span></li>'+
+       '<li><span class="ab" for="H">H</span></li>'+
+       '<li><span class="ab" for="I">I</span></li>'+
+       '</ul>'+
+       '</div>'+*/
+      '</div>';
+
+    $.popup(popupHTML);
+
+    $('.brand-block .close-popup').on('click', function () {
+      var newValue = $(this).data('label');
+      var oldValue = $('input[name="brand"]').val();
+
+      $('input[name="brand"]').val(newValue);
+      if (oldValue !== newValue) {
+        $('input[name="series"]').val('');
+      }
+    });
+
+  });
+});
 
 
 

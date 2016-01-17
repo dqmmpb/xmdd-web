@@ -32,6 +32,10 @@
       "browser": true,
       "jquery": true
     },
+    "globals": {
+      "WebKitCSSMatrix": true,
+      "animateTo": true
+    },
     "rules": {
       "quotes": [
         2,
