@@ -602,9 +602,9 @@
         .item-title {
           @include pxTorem(width, 56px);
           text-align: justify;
+          -webkit-text-align-last:justify;
           -ms-text-align-last: justify;
           text-align-last: justify;
-          -webkit-text-align-last:justify;
           -webkit-box-pack: justify;
         }
 
