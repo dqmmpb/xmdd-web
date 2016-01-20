@@ -5,6 +5,7 @@
 
   @include pxTorem(margin, 0);
 
+
   .shop {
     @include pxTorem(margin, 5px, 0);
 
@@ -128,6 +129,7 @@
         .type {
           @include pxTorem(padding, 2px, 0);
           color: $default-font-color;
+          @include pxTorem(font-size, 14px);
         }
         .button-pay {
           @include pxTorem(line-height, 25px);
@@ -456,12 +458,9 @@
     }
 
     .item-inner {
-
-      @include pxTorem(margin-left, 10px);
-      @include pxTorem(padding-right, 0);
-
       background-image: none;
-
+      @include pxTorem(padding-left, 0px);
+      @include pxTorem(padding-right, 0px);
       .item-title {
         @include pxTorem(font-size, 13px);
       }

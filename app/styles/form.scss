@@ -8,6 +8,7 @@ input::-webkit-outer-spin-button {
 .list-block {
 
   .wrapper {
+    width: 100%;
     min-height: 2.2rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -36,6 +37,25 @@ input::-webkit-outer-spin-button {
       transform-origin: 50% 100%;
     }
   }
+  /*
+
+  .item-media {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  &.media-list .item-inner, & li.media-item .item-inner {
+    display: table-cell;
+    vertical-align: top;
+    @include pxTorem(padding-left, 10px);
+    @include pxTorem(padding-right, 10px);
+    width: 100%;
+  }
+
+  &.media-list .item-title-row, & li.media-item .item-title-row {
+    display: block;
+  }
+  */
 
   .item-input {
 

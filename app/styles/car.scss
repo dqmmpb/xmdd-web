@@ -56,17 +56,14 @@
     }
 
     .item-content {
-      @include pxTorem(padding-left, 10px);
-      @include pxTorem(padding-right, 10px);
+      @include pxTorem(padding-left, 0px);
+      @include pxTorem(padding-right, 0px);
       @include pxTorem(height, 56px);
       display: block;
       position: relative;
     }
 
     .item-inner {
-
-      @include pxTorem(margin-left, 10px);
-      @include pxTorem(padding-right, 0);
 
       background-image: none;
 
