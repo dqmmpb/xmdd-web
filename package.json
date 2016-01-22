@@ -34,7 +34,8 @@
     },
     "globals": {
       "WebKitCSSMatrix": true,
-      "animateTo": true
+      "animateTo": true,
+      "AMap": true
     },
     "rules": {
       "quotes": [
