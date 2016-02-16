@@ -78,8 +78,8 @@
         .rank-stars {
           color: $color-orange;
           .icon {
-            width: 0.7rem;
-            height: 0.7rem;
+            @include pxTorem(width, 14px);
+            @include pxTorem(height,14px);
             text-align: center;
             &.active {
               color: $color-orange;
@@ -264,8 +264,8 @@
         .rank-stars {
           color: $color-orange;
           .icon {
-            width: 0.7rem;
-            height: 0.7rem;
+            @include pxTorem(width, 14px);
+            @include pxTorem(height,14px);
             text-align: center;
             &.active {
               color: $color-orange;
@@ -333,9 +333,31 @@
         text-align: center;
         width: 100%;
         color: $color-gray;
-        @include pxTorem(margin-bottom, 10px);
 
       }
+
+      .comment-rank {
+
+        @include pxTorem(font-size, 20px);
+        @include pxTorem(padding, 0, 0);
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+
+        .rank-stars {
+          color: $color-orange;
+          .icon {
+            @include pxTorem(width, 20px);
+            @include pxTorem(height, 20px);
+            @include pxTorem(margin, 12px);
+            text-align: center;
+            &.active {
+              color: $color-orange;
+            }
+          }
+        }
+      }
+
       .comment-textarea-input {
         @include pxTorem(margin-top, 0);
         @include pxTorem(margin-bottom, 0);
@@ -415,6 +437,8 @@
       .item-media {
         @include pxTorem(padding-top, 10px);
         @include pxTorem(padding-bottom, 9px);
+        /*display: block;*/
+        -webkit-box-align: baseline;
       }
     }
 
@@ -572,10 +596,7 @@
         .item-title {
           @include pxTorem(width, 56px);
           text-align: justify;
-          -ms-text-align-last: justify;
           text-align-last: justify;
-          -webkit-text-align-last:justify;
-          -webkit-box-pack: justify;
         }
 
         .item-after {

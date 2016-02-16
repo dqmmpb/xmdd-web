@@ -12,11 +12,12 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- 使用SUI Mobile的CDN -->
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.1/css/sm.css">
-    <!-- 扩展组件 -->
-    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.1/css/sm-extend.css">
-
+    <!-- build:css styles/sm.css -->
+    <link rel="stylesheet" href="styles/sm.css">
+    <!-- endbuild -->
+    <!-- build:css styles/sm-extend.css -->
+    <link rel="stylesheet" href="styles/sm-extend.css">
+    <!-- endbuild -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -107,33 +108,33 @@
     </div>
 
 
-
-
-
-    <!-- 使用SUI Mobile的CDN -->
-    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.js' charset='utf-8'></script>
-
-    <!-- build:js scripts/config.js -->
-    <script src="scripts/config.js"></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/swipeTo.js -->
-    <script src="scripts/swipeTo.js"></script>
-    <!-- endbuild -->
-
-    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.1/js/sm.js' charset='utf-8'></script>
-    <!-- 扩展组件 -->
-    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.1/js/sm-extend.js' charset='utf-8'></script>
-
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=31e4676d03443e544d4105195c04f1fa"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/config.js -->
+    <script src="scripts/config.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/sm.js -->
+    <script src="scripts/sm.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/sm-extend.js -->
+    <script src="scripts/sm-extend.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/swipeTo.js -->
+    <script src="scripts/swipeTo.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!--<script src="http://192.168.1.105:8080/target/target-script-min.js#anonymous"></script>-->
 
   </body>
 </html>

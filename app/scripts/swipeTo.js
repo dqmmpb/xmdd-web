@@ -27,11 +27,11 @@ var animateTo = function(that, pos) {
     }, 500);
   } else {
     that.css({
-      'transform': 'translateX(' + pos + 'px)',
-      '-webkit-transform': 'translateX(' + pos + 'px)',
-      '-moz-ransform': 'translateX(' + pos + 'px)',
-      '-o-transform': 'translateX(' + pos + 'px)',
-      '-ms-transform': 'translateX(' + pos + 'px)'
+      'transform': 'translate3d(' + pos + 'px,0,0)',
+      '-webkit-transform': 'translate3d(' + pos + 'px,0,0)',
+      '-moz-ransform': 'translate3d(' + pos + 'px,0,0)',
+      '-o-transform': 'translate3d(' + pos + 'px,0,0)',
+      '-ms-transform': 'translate3d(' + pos + 'px,0,0)'
     }, 500);
   }
 };
@@ -101,6 +101,10 @@ $.fn.swipeTo = function(options) {
     var that = $(this);
     that.removeClass('swiped');
     var e = ev.originalEvent;
+    // 禁用默认事件和事件传播，修复个别android机型下卡顿问题
+    ev.preventDefault();
+    ev.stopPropagation();
+
     moving = e.changedTouches[0].clientX;
     verticalMov = e.changedTouches[0].clientY;
     res = start - moving;

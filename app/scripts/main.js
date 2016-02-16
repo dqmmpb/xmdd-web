@@ -648,6 +648,19 @@ $(document).on('pageInit', '#pay-page', function(e, id, page) {
     $(this).prev('input').val('');
   });
 
+  $(page).on('click tap', '.button-pay', function(event) {
+    event.preventDefault();
+    var that = $(this);
+
+    $.confirm('请务必到店享受服务，且与店员确认服务，支付完成后将扣除一次洗车权益', '温馨提示',
+      function () {
+        that.parent().parent().parent().remove('500');
+      },
+      function () {
+      }
+    );
+  });
+
 });
 
 // 登录页面
@@ -772,7 +785,22 @@ $(document).on('pageInit', '#car-page', function(e, id, page) {
 
 
 
-// 登录页面
+// 评价页面
+$(document).on('pageInit', '#comment-page', function(e, id, page) {
+
+  // 清除input内容
+  $(page).find('.rank-stars .xmdd-icon').on('click', function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    $(page).find('.rank-stars .xmdd-icon:lt(' + ($(this).index() + 1) + ')').addClass('xmdd-icon-star');
+    $(page).find('.rank-stars .xmdd-icon:gt(' + $(this).index() + ')').removeClass('xmdd-icon-star');
+  });
+
+});
+
+
+
+// 定位页面
 $(document).on('pageInit', '#geo-page', function(e, id, page) {
 
   $(page).on('click', '.popup-city', function () {

@@ -10,9 +10,9 @@ input::-webkit-outer-spin-button {
   .wrapper {
     width: 100%;
     min-height: 2.2rem;
-    display: -webkit-box;
     display: -webkit-flex;
     display: flex;
+    display: -webkit-box;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;

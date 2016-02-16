@@ -53,9 +53,9 @@
 
     .wrapper {
       min-height: 2.2rem;
-      display: -webkit-box;
       display: -webkit-flex;
       display: flex;
+      display: -webkit-box;
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
       justify-content: space-between;
@@ -135,7 +135,7 @@
 
         .type {
           @include pxTorem(font-size, 12px);
-          @include pxTorem(padding, 4px, 0, 0, 0);
+          @include pxTorem(line-height, 25px);
           color: $default-font-color;
         }
 
@@ -152,7 +152,7 @@
 
         .status {
           @include pxTorem(font-size, 12px);
-          @include pxTorem(padding, 4px, 0, 0, 0);
+          @include pxTorem(line-height, 25px);
           color: $default-font-color;
 
           &.success {
