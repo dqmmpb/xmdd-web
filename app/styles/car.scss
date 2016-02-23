@@ -161,17 +161,20 @@ html:not(.watch-active-state) .car-single .item-link:active .item-inner:after, .
       }
 
       .item-ipnut-select {
-        @include pxTorem(width, 60px);
+        @include pxTorem(width, 40px);
         @include pxTorem(margin, 0, 0, 0, 10px);
+        display: -webkit-flex;
+        display: inline-flex;
+        @include pxTorem(margin-top, 0px);
+        @include pxTorem(margin-bottom, 3px);
 
         .select {
           @include pxTorem(font-size, 14px);
           @include pxTorem(height, 24px);
-          @include pxTorem(width, 40px);
+          width: 100%;
           @include pxTorem(padding, 0, 4px);
           color: $color-green;
           border: 1px solid $color-green;
-
           @include pxTorem(border-radius, 2px);
           position: relative;
 
