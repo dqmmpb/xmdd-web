@@ -5365,9 +5365,9 @@ Device/OS Detection
                 if (!this.length) return;
                 var scroller = this.data('scroller');
                 if (scroller && scroller.scroller) { //js滚动
-                    scroller.scrollTop(top, dur);
+                    return scroller.scrollTop(top, dur);
                 } else {
-                    _zeptoMethodCache.scrollTop.apply(this, arguments);
+                    return _zeptoMethodCache.scrollTop.apply(this, arguments);
                 }
             }
         });
@@ -5376,9 +5376,9 @@ Device/OS Detection
                 if (!this.length) return;
                 var scroller = this.data('scroller');
                 if (scroller && scroller.scroller) { //js滚动
-                    scroller.scrollLeft(left, dur);
+                    return scroller.scrollLeft(left, dur);
                 } else {
-                    _zeptoMethodCache.scrollLeft.apply(this, arguments);
+                    return _zeptoMethodCache.scrollLeft.apply(this, arguments);
                 }
             }
         });
@@ -5786,7 +5786,7 @@ Device/OS Detection
             var shadow = this.options.shadow;
             var offset = this.options.offset;
             var fixedTop = this.options.fixedTop;
-            var scrollTop = $scroller.scrollTop();
+            var scrollTop = $scroller.scrollTop().scrollTop();
             var isFixed = scrollTop >= fixedTop - offset;
             if (isFixed) {
                 shadow.insertAfter($pageContent);
@@ -5846,7 +5846,7 @@ Device/OS Detection
 
         function handleScroll() {
             if (container.hasClass('refreshing')) return;
-            if (scroller.scrollTop() * -1 >= 44) {
+            if (scroller.scrollTop().scrollTop() * -1 >= 44) {
                 container.removeClass('pull-down').addClass('pull-up');
             } else {
                 container.removeClass('pull-up').addClass('pull-down');
@@ -6133,7 +6133,7 @@ Device/OS Detection
         /*jshint validthis:true */
         var inf = $(this);
         var scroller = $.getScroller(inf);
-        var scrollTop = scroller.scrollTop();
+        var scrollTop = scroller.scrollTop().scrollTop();
         var scrollHeight = scroller.scrollHeight();
         var height = inf[0].offsetHeight;
         var distance = inf[0].getAttribute('data-distance');
@@ -6150,6 +6150,7 @@ Device/OS Detection
                 inf.trigger('infinite');
             }
         } else {
+
             if (scrollTop + height >= scrollHeight - distance) {
                 if (virtualListContainer.length > 0) {
                     virtualList = virtualListContainer[0].f7VirtualList;

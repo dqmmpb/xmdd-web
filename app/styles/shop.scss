@@ -107,6 +107,10 @@
       }
       .location {
 
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+
         @include pxTorem(font-size, 12px);
         @include pxTorem(padding, 1px, 0, 0, 0);
 
@@ -114,6 +118,7 @@
 
         .address {
           color: $default-font-color-light;
+          max-width: 80%;
         }
 
         .distance {
