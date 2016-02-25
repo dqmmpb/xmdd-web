@@ -6150,7 +6150,6 @@ Device/OS Detection
                 inf.trigger('infinite');
             }
         } else {
-
             if (scrollTop + height >= scrollHeight - distance) {
                 if (virtualListContainer.length > 0) {
                     virtualList = virtualListContainer[0].f7VirtualList;
