@@ -1577,12 +1577,12 @@ Device/OS Detection
         if (isModal) {
             modal.show();
             modal.css({
-                marginTop: -Math.round(modal.outerHeight() / 2) + 'px'
+                marginTop: -Math.round(modal.innerHeight() / 2) + 'px'
             });
         }
         if (isToast) {
             modal.css({
-                marginLeft: -Math.round(modal.outerWidth() / 2 / 1.185) + 'px' //1.185 是初始化时候的放大效果
+                marginLeft: -Math.round(modal.innerWidth() / 2 / 1.185) + 'px' //1.185 是初始化时候的放大效果
             });
         }
 
@@ -7584,7 +7584,7 @@ Device/OS Detection
                     elem.scrollTop = 0;
 
                 if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
-                    elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+                    elem.scrollTop = elem.scrollHeight - elem.offsetHeight;
             }, false);
         };
 
