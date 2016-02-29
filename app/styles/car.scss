@@ -161,16 +161,19 @@ html:not(.watch-active-state) .car-single .item-link:active .item-inner:after, .
       }
 
       .item-ipnut-select {
-        @include pxTorem(width, 40px);
+        @include pxTorem(max-width, 40px);
         @include pxTorem(margin, 0, 0, 0, 10px);
-        display: -webkit-flex;
-        display: inline-flex;
-        @include pxTorem(margin-top, 0px);
-        @include pxTorem(margin-bottom, 3px);
+        display: inline-block;
+        @include pxTorem(height, 24px);
+
+        @include pxTorem(margin-top, 1px);
+        @include pxTorem(margin-bottom, 1px);
 
         .select {
           @include pxTorem(font-size, 14px);
-          @include pxTorem(height, 24px);
+          @include pxTorem(height, 22px);
+          @include pxTorem(line-height, 20px);
+          vertical-align: middle;
           width: 100%;
           @include pxTorem(padding, 0, 4px);
           color: $color-green;
@@ -181,6 +184,7 @@ html:not(.watch-active-state) .car-single .item-link:active .item-inner:after, .
           option {
             padding: 0;
           }
+
         }
         &:after {
           content: '';
@@ -194,6 +198,11 @@ html:not(.watch-active-state) .car-single .item-link:active .item-inner:after, .
           border-right: 1px solid transparent;
           border-botton: 1px solid transparent;
           @include pxTorem(border-width, 4px);
+        }
+
+
+        & + .item-input {
+          @include pxTorem(margin-left, 10px);
         }
       }
 

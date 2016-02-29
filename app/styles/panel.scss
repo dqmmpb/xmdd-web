@@ -45,11 +45,26 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0.75rem 0;
-  font-size: 0.625rem;
 
-  .xmdd-icon-logo {
+  display: block;
+
+
+  .logo-panel {
     @include pxTorem(font-size, 24px);
+    text-align: center;
+  }
+
+  .logo-img {
+    margin: 0 auto;
+    background: url(../images/logo.svg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    @include pxTorem(width, 108px);
+    @include pxTorem(height, 28px);
+  }
+
+  p {
+    @include pxTorem(font-size, 13px);
   }
 }
 
