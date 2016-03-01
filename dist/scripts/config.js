@@ -1,1 +1,1 @@
-"use strict";$.config={routerFilter:function(r){return r.is(".disable-router a")?!1:!0}};
+"use strict";$.config={routerFilter:function(r){return!r.is(".disable-router a")}};

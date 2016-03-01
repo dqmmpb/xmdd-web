@@ -51,10 +51,10 @@ gulp.task('html', ['styles'], () => {
     .pipe(jsfilter)
     .pipe($.if('*.js', $.uglify()))
     .pipe(jsfilter.restore)
-    .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
+    .pipe($.if('*.css', $.cleanCss({compatibility: '*', advanced: false})))
     .pipe(assets.restore())
     .pipe($.useref())
-    /*.pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))*/
+    /*.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))*/
     .pipe(gulp.dest('dist'));
 });
 
