@@ -104,6 +104,14 @@
         .badge-close {
           background-color: $default-btn-bg-color;
         }
+
+        .img-closed {
+          @include pxTorem(width, 54px);
+          @include pxTorem(height, 38px);
+          position: absolute;
+          right: 0;
+          @include pxTorem(top, 10px);
+        }
       }
       .location {
 
@@ -157,6 +165,12 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .shop.closed {
+    .shop-title {
+      max-width: 80%;
     }
   }
 
