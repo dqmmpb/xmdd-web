@@ -7,6 +7,10 @@
       color: $default-icon-active-color;
     }
   }
+
+  .icon.pull-right {
+    @include pxTorem(margin-left, 10px);
+  }
 }
 
 .bar-transparent {

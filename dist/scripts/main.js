@@ -899,6 +899,164 @@ $(document).on('pageInit', '#map-page', function() {
 
 });
 
+// 附近商户页面
+$(document).on('pageInit', '#near-page', function() {
+
+  var mapObj = new AMap.Map('iCenter');
+
+  var positions = [
+    {
+      lng: '120.180457,30.1879739',
+      nearest: true,
+      title: '方恒国际中心方恒国际中心方恒国际中心方恒国际中心方恒国际中心',
+      addr: '阜通东大街6号阜通东大街6号阜通东大街6号阜通东大街6号阜通东大街6号',
+      tel: '13819493700'
+    },
+    {
+      lng: '120.180247,30.1875839',
+      nearest: false,
+      title: '方恒国际中心',
+      addr: '阜通东大街6号',
+      tel: '18888888888'
+    },
+    {
+      lng: '120.178257,30.1888639',
+      nearest: false,
+      title: '小马达达',
+      addr: '阜通东大街6号',
+      tel: '19999999999'
+    }
+  ];
+
+
+  var icon = new AMap.Icon({
+    image: 'images/ic_amap_marker_1.png',
+    size: new AMap.Size(32, 50)
+  });
+
+  var iconClick = new AMap.Icon({
+    image: 'images/ic_amap_marker_0.png',
+    size: new AMap.Size(32, 50)
+  });
+
+  function createInfoWindowContent(item) {
+    return '<div class="list-block media-list infowindow-content"><ul>' +
+      '<li>' +
+      '<div class="item-content">' +
+      '<div class="item-inner">' +
+      '<div class="item-title">' + item.title + '</div>' +
+      '<div class="item-subtitle">' + item.addr + '</div>' +
+      '</div>' +
+      '<div class="item-after"><a href="shop.html" class="amap-info-body">详情>></a></div>' +
+      '</div>' +
+      '</li>' +
+      '<li>' +
+      '<div class="item-content">' +
+      '<div class="item-inner">' +
+      '<div class="item-subtitle"><a href="tel:' + item.tel + '" external><span class="icon xmdd-icon xmdd-icon-phone active"></span> 电话：' + item.tel + '</a></div>' +
+      '</div>' +
+      '</div>' +
+      '</li>' +
+      '</ul></div>';
+  }
+
+  var latestMarker;
+
+
+  function markerPosition(position) {
+    AMap.plugin('AMap.AdvancedInfoWindow', function() {
+      var infowindow = new AMap.AdvancedInfoWindow({
+        panel: 'panel',
+        placeSearch: false,
+        asOrigin: false,
+        asDestination: false,
+        content: createInfoWindowContent(position),
+        offset: new AMap.Pixel(0, 0)
+      });
+
+      infowindow.open(mapObj, position.lng.split(','));
+    });
+  }
+
+  function markerClick(e) {
+    var target = e.target;
+    target.setIcon(iconClick);
+
+    if(latestMarker !== target) {
+      latestMarker.setIcon(icon);
+      latestMarker = target;
+    }
+
+    markerPosition(target.getExtData());
+  }
+
+  //解析定位结果
+  function onComplete(data) {
+
+    var str = ['定位成功'];
+    str.push('经度：' + data.position.getLng());
+    str.push('纬度：' + data.position.getLat());
+    str.push('精度：' + data.accuracy + ' 米');
+    str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+    console.log(str);
+
+    var allMarkers = mapObj.getAllOverlays('marker');
+
+    mapObj.remove(allMarkers);
+
+
+    for(var i = 0; i < positions.length; i++) {
+      var position = positions[i];
+
+      var marker = new AMap.Marker({
+        icon: icon,//24px*24px
+        position: position.lng.split(','),
+        offset: new AMap.Pixel(-16, -50),
+        map: mapObj,
+        extData: position
+      });
+
+
+      if(!latestMarker) {
+        marker.setIcon(iconClick);
+        latestMarker = marker;
+
+        markerPosition(position);
+      }
+
+      marker.on('click', markerClick);
+
+    }
+
+
+  }
+  //解析定位错误信息
+  function onError(data) {
+    console.log('定位失败' + data);
+  }
+
+  mapObj.plugin('AMap.Geolocation', function () {
+    var geolocation = new AMap.Geolocation({
+      enableHighAccuracy: true,//是否使用高精度定位，默认:true
+      timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+      maximumAge: 0,           //定位结果缓存0毫秒，默认：0
+      convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+      showButton: true,        //显示定位按钮，默认：true
+      buttonPosition: 'LB',    //定位按钮停靠位置，默认：'LB'，左下角
+      buttonOffset: new AMap.Pixel(6, 96),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+      showMarker: true,        //定位成功后在定位到的位置显示点标记，默认：true
+      showCircle: true,        //定位成功后用圆圈表示定位精度范围，默认：true
+      panToLocation: true,     //定位成功后将定位到的位置作为地图中心点，默认：true
+      zoomToAccuracy: true      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+    });
+    mapObj.addControl(geolocation);
+    geolocation.getCurrentPosition();
+    AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+    AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+  });
+
+});
+
 
 
 // 页面切换时清除page中的js

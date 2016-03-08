@@ -107,8 +107,157 @@
     height: 100%;
   }
 
-  .amap-logo {
+  .amap-logo, .amap-copyright, .amap-adcombo-close {
+    display: none;
+    height: 0;
+    width: 0;
+    z-index: -1;
+  }
+
+  .amap-adcontent-body {
+    border-radius: 5px;
+    box-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.3);
+  }
+
+  .amap-icon {
+    img {
+      width: 100%;
+    }
+  }
+
+  .amap-info {
+    position: fixed !important;
+
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 6px !important;
+    top: auto !important;
+    width: auto;
+
+    > div {
+      position: relative !important;
+    }
+  }
+
+  .amap-combo-sharp {
     display: none;
   }
+
+  .amap-info-combo .keyword {
+    outline: none;
+    line-height: 1;
+  }
+
+  .amap-info-combo .keyword-input {
+    line-height: 18px;
+  }
+
+  .amap-info-combo .search-button {
+    height: 22px;
+    line-height: 22px;
+    background-position: 6px -198px;
+  }
+
+  .amap-controls {
+
+    > div {
+/*      @include pxTorem(left, 5px);
+      @include pxTorem(bottom, 96px);*/
+      left: 0.25rem !important;
+      bottom: 4.8rem !important;
+    }
+
+/*    right: 18px !important;
+    bottom: 6px !important;*/
+  }
+
+  .amap-info-combo {
+/*    padding: 4px 0 6px;*/
+
+    table:last-child {
+      margin: 0;
+    }
+  }
+
+  .infowindow-content {
+    padding: 2px 8px;
+    margin: 0;
+    @include pxTorem(font-size, 14px);
+
+    ul {
+
+      &:before, &:after {
+        height: 0;
+      }
+
+      li {
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: auto;
+          top: auto;
+          height: 1px;
+          width: 100%;
+          background-color: #e7e7e7;
+          display: block;
+          z-index: 15;
+          -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+        }
+
+        &:last-child:after {
+          height: 0;
+        }
+      }
+
+
+    }
+
+    .item-content {
+      padding-left: 0;
+      @include pxTorem(min-height, 30px);
+
+
+      .item-inner {
+        @include pxTorem(min-height, 30px);
+        @include pxTorem(padding-top, 5px);
+        @include pxTorem(padding-bottom, 4px);
+        padding-right: 0;
+
+        &:after {
+          height: 0;
+        }
+
+        .item-title {
+          font-weight: 600;
+        }
+
+        .item-subtitle {
+          @include pxTorem(font-size, 13px);
+        }
+      }
+
+      .item-after {
+        @include pxTorem(font-size, 13px);
+      }
+    }
+
+
+  }
+
+
 }
 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .map-content-block .amap-adcontent-body {
+    border-width: 0.5px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .map-content-block .amap-adcontent-body {
+    border-width: 0.33px;
+  }
+}
