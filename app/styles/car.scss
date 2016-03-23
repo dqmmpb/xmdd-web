@@ -39,7 +39,7 @@
       transform-origin: 50% 100%;
     }
 
-    &:after {
+    li:after {
       content: '';
       position: absolute;
       left: 0;
