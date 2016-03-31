@@ -1400,16 +1400,22 @@ a:active {
   overflow: hidden;
   box-sizing: border-box;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-box;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -ms-flex-item-align: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch;
 }
 .list-block .item-inner:after {
   content: '';
@@ -1554,9 +1560,11 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   display: flex;
   display: -webkit-box;
   -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
 }
@@ -1565,6 +1573,12 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   padding: 0 0.75rem;
   font-size: 0.7rem;
   color: #5f646e;
+}
+
+.swipeout .item-inner {
+  bottom: 2.8rem;
+  left: 2rem;
+  width:91%;
 }
 .list-block .swipeout {
   overflow: hidden;
@@ -1600,12 +1614,15 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   top: 0;
   height: 100%;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-box;
+  white-space: nowrap;
 }
 .list-block .swipeout-actions-left a,
 .list-block .swipeout-actions-right a {
-  padding: 0 1.5rem;
+  /*padding: 0 1.5rem;*/
+  padding: 0.8rem;
   color: #fff;
   background: #c7c7cc;
   display: -webkit-flex;
@@ -1617,8 +1634,8 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   position: relative;
   left: 0;
 }
-.list-block .swipeout-actions-left a:after,
-.list-block .swipeout-actions-right a:after {
+.list-block .swipeout-actions-left a:after
+,.list-block .swipeout-actions-right a:after {
   content: '';
   position: absolute;
   top: 0;
@@ -1630,6 +1647,8 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
 .list-block .swipeout-actions-left a.swipeout-delete,
 .list-block .swipeout-actions-right a.swipeout-delete {
   background: #f6383a;
+  width: 2.8rem;
+  /*background: #ff3b30;*/
 }
 .list-block .swipeout-actions-right {
   right: 0%;
@@ -1660,6 +1679,7 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
 .list-block .item-text {
   font-size: 0.75rem;
   color: #5f646e;
+  /*color: #8e8e93;*/
   line-height: 1.05rem;
   position: relative;
   overflow: hidden;
@@ -1687,6 +1707,7 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
 .list-block li.media-item .item-media {
   padding-top: 0.45rem;
   padding-bottom: 0.5rem;
+  padding-left: 0.45rem;
 }
 .list-block.media-list .item-media img,
 .list-block li.media-item .item-media img {
@@ -1719,6 +1740,7 @@ html:not(.watch-active-state) .list-block .item-link:active .item-inner:after,
   text-overflow: ellipsis;
   overflow: hidden;
   color: #e7e7e7;
+  /*color: #8e8e93;*/
 }
 .list-block .item-divider:before,
 .list-block .list-group-title:before {
@@ -2751,6 +2773,9 @@ input[type="button"].button {
           transform: translate3d(0, 0, 0) scale(1.185);
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
   color: #3d4145;
   display: none;
 }
@@ -2858,18 +2883,18 @@ input[type="button"].button {
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .modal-button:after {
-    -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 3) {
-  .modal-button:after {
-    -webkit-transform: scaleY(0.33);
-            transform: scaleY(0.33);
-  }
-}
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2) {*/
+  /*.modal-button:after {*/
+    /*-webkit-transform: scaleY(0.5);*/
+            /*transform: scaleY(0.5);*/
+  /*}*/
+/*}*/
+/*@media only screen and (-webkit-min-device-pixel-ratio: 3) {*/
+  /*.modal-button:after {*/
+    /*-webkit-transform: scaleY(0.33);*/
+            /*transform: scaleY(0.33);*/
+  /*}*/
+/*}*/
 .modal-button:first-child {
   border-radius: 0 0 0 0.35rem;
 }

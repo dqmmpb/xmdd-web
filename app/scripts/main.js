@@ -297,27 +297,27 @@ $(document).on('pageInit', '#car-page-infinite-scroll-bottom', function(e, id, p
     setTimeout(function() {
       var html = '';
       for (var i = 1; i <= itemsPerLoad; i++) {
-        html += '<div class="card car">' +
-          '<div class="item-content">' +
-            '<div class="wrapper car-info item-swipe">' +
-              '<div class="item-media"><img src="http://7xjclc.com2.z0.glb.clouddn.com/1433075645620.jpg?imageView2/1/w/60/h/60" class="img"></div>' +
-              '<div class="item-inner">' +
-                '<div class="item-title-row">' +
-                  '<div class="item-title car-title">浙A***23</div>' +
-                '</div>' +
-                '<div class="item-title-row">' +
-                  '<div class="item-title">宝马 Z4</div>' +
-                '</div>' +
-              '</div>' +
-            '</div>' +
-            '<div class="item-back">' +
-              '<button class="button button-fill button-danger button-delete" type="button">删除</button>' +
-            '</div>' +
-          '</div>' +
-        '</div>';
+        html +=   '<li class="swipeout">'+
+                    '<div class="swipeout-content item-content">'+
+                      '<div class="item-media">'+
+                        '<img src="http://7xjclc.com2.z0.glb.clouddn.com/1433075645620.jpg?imageView2/1/w/60/h/60" class="img">'+
+                      '</div>'+
+                      '<div class="item-inner">'+
+                        '<div class="item-title-row">'+
+                          '<div class="item-title car-title">浙A***88</div>'+
+                        '</div>'+
+                        '<div class="item-title-row">'+
+                          '<div class="item-title">自行车</div>'+
+                        '</div>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="swipeout-actions-right">'+
+                      '<a href="#" class="swipeout-delete" data-confirm="确定要删除这一条吗?" data-confirm-title="Delete?">删除</a>'+
+                    '</div>'+
+                  '</li>';
       }
 
-      $content.find('.card-container').html(html);
+      $content.find('ul').html(html);
 
       // $(window).scrollTop(0);
       // 加载完毕需要重置
@@ -358,27 +358,27 @@ $(document).on('pageInit', '#car-page-infinite-scroll-bottom', function(e, id, p
     // 生成新条目的HTML
     var html = '';
     for (var i = index + 1; i <= index + number; i++) {
-      html += '<div class="card car">' +
-        '<div class="item-content">' +
-          '<div class="wrapper car-info item-swipe">' +
-            '<div class="item-media"><img src="http://7xjclc.com2.z0.glb.clouddn.com/1433075645620.jpg?imageView2/1/w/60/h/60" class="img"></div>' +
-            '<div class="item-inner">' +
-              '<div class="item-title-row">' +
-                '<div class="item-title car-title">浙A***23</div>' +
-              '</div>' +
-              '<div class="item-title-row">' +
-                '<div class="item-title">宝马 Z4</div>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
-          '<div class="item-back">' +
-            '<button class="button button-fill button-danger button-delete" type="button">删除</button>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
+      html += '<li class="swipeout">'+
+                '<div class="swipeout-content item-content">'+
+                  '<div class="item-media">'+
+                    '<img src="http://7xjclc.com2.z0.glb.clouddn.com/1433075645620.jpg?imageView2/1/w/60/h/60" class="img">'+
+                  '</div>'+
+                  '<div class="item-inner">'+
+                    '<div class="item-title-row">'+
+                      '<div class="item-title car-title">浙A***88</div>'+
+                    '</div>'+
+                    '<div class="item-title-row">'+
+                      '<div class="item-title">自行车</div>'+
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+                '<div class="swipeout-actions-right">'+
+                  '<a href="#" class="swipeout-delete" data-confirm="确定要删除这一条吗?" data-confirm-title="Delete?">删除</a>'+
+                '</div>'+
+              '</li>';
     }
     // 添加新条目
-    $('.infinite-scroll .card-container').append(html);
+    $('.infinite-scroll ul').append(html);
 
     $('.item-swipe').swipeTo({
       minSwipe: '.item-back',
