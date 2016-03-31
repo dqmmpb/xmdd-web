@@ -42,20 +42,21 @@ gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
-  const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  var jsfilter = $.filter(['**', '!**/main.js'], {restore: true});
+  var jsfilter = $.filter(['**/*.js', '!**/main.js'], {restore: true});
+  var cssfilter = $.filter(['**/*.css'], {restore: true});
 
   return gulp.src('app/*.html')
-    .pipe(assets)
+    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe(jsfilter)
     .pipe($.if('*.js', $.uglify()))
     .pipe(jsfilter.restore)
+    .pipe(cssfilter)
     .pipe($.if('*.css', $.cleanCss({compatibility: '*', advanced: false})))
-    .pipe(assets.restore())
-    .pipe($.useref())
+    .pipe(cssfilter.restore)
     /*.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))*/
     .pipe(gulp.dest('dist'));
+
 });
 
 gulp.task('images', () => {
