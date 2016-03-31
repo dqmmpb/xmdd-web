@@ -6550,7 +6550,7 @@ Device/OS Detection
 
 
 (function($){
-
+  'use strict';
   /*===============================================================================
    ************   Swipeout Actions (Swipe to delete)   ************
    ===============================================================================*/
@@ -6813,7 +6813,7 @@ Device/OS Detection
           $(buttonsRight[i]).transform('translate3d(' + (-buttonOffset) + 'px,0,0)');
         }
       }
-      swipeOutContent.transitionEnd(function (e) {
+      swipeOutContent.transitionEnd(function () {
         if (opened && action === 'open' || closed && action === 'close') return;
         swipeOutEl.trigger(action === 'open' ? 'opened' : 'closed');
         if (opened && action === 'close') {
@@ -6868,7 +6868,7 @@ Device/OS Detection
     if (buttons.length > 1) {
       for (i = 0; i < buttons.length; i++) {
         if (dir === 'right') {
-          $(buttons[i]).transform('translate3d(' + (- buttons[i].offsetLeft) + 'px,0,0)');
+          $(buttons[i]).transform('translate3d(' + (-buttons[i].offsetLeft) + 'px,0,0)');
         }
         else {
           $(buttons[i]).css('z-index', buttons.length - i).transform('translate3d(' + (swipeOutActionsWidth - buttons[i].offsetWidth - buttons[i].offsetLeft) + 'px,0,0)');
@@ -6919,7 +6919,7 @@ Device/OS Detection
       else {
         $(buttons[i]).transform('translate3d(' + (swipeOutActionsWidth - buttons[i].offsetWidth - buttons[i].offsetLeft) + 'px,0,0)');
       }
-      $(buttons[i]).css({left:0 + 'px'});
+      $(buttons[i]).css({left: 0 + 'px'});
     }
     if ($.swipeoutOpenedEl && $.swipeoutOpenedEl[0] === el[0]) $.swipeoutOpenedEl = undefined;
   };
